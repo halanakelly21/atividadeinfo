@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() 
+{
+    const int linhas = 2;
+    const int colunas = 3;
+    int matriz[linhas][colunas];
+
+    // Ler os valores numéricos inteiros para preencher a matriz 2x3
+    std::cout << "Digite 6 valores numéricos inteiros para preencher a matriz 2x3:\n";
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            std::cin >> matriz[i][j];
+        }
+    }
+
+    // Calcular a soma dos 6 números
+    int soma = 0;
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            soma += matriz[i][j];
+        }
+    }
+
+    // Exibir a soma dos 6 números
+    std::cout << "A soma dos 6 números é: " << soma << std::endl;
+
+    return 0;
+}

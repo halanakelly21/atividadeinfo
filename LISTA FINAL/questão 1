@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    const double PI = 3.14159;  // Valor constante de PI
+
+    double raio, diametro, comprimento, area;
+
+    cout << "Digite o raio da circunferencia: ";
+    cin >> raio;
+
+    // Cálculos
+    diametro = 2 * raio;
+    comprimento = 2 * PI * raio;
+    area = PI * pow(raio, 2);
+
+    // Exibindo os resultados
+    cout << "Diametro da circunferencia: " << diametro << endl;
+    cout << "Comprimento da circunferencia: " << comprimento << endl;
+    cout << "Area da circunferencia: " << area << endl;
+
+    return 0;
+}

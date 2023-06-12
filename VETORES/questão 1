@@ -1,0 +1,32 @@
+#include <iostream>
+
+int main() {
+    const int tamanhoVetor = 10;
+    int vetor[tamanhoVetor];
+
+    // Preenchendo o vetor com valores fornecidos
+    std::cout << "Digite 10 números inteiros:\n";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cin >> vetor[i];
+    }
+
+    // Encontrando o maior número
+    int maiorNumero = vetor[0];
+    for (int i = 1; i < tamanhoVetor; i++) {
+        if (vetor[i] > maiorNumero) {
+            maiorNumero = vetor[i];
+        }
+    }
+
+    // Exibindo o vetor preenchido
+    std::cout << "Vetor preenchido: ";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cout << vetor[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Exibindo o maior número encontrado
+    std::cout << "O maior número é: " << maiorNumero << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int quantidadeAlunos;
+    double nota, somaNotas = 0.0;
+    int contador = 0;
+
+    cout << "Digite a quantidade de alunos: ";
+    cin >> quantidadeAlunos;
+
+    do {
+        cout << "Digite a nota do aluno " << contador + 1 << ": ";
+        cin >> nota;
+
+        somaNotas += nota;
+        contador++;
+    } while (contador < quantidadeAlunos);
+
+    double media = somaNotas / quantidadeAlunos;
+
+    cout << "Media aritmetica da turma : " << media << endl;
+
+    return 0;
+}

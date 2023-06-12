@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int totalAlunos = 5;
+    const int totalNotas = 4;
+    const double peso1 = 3.0;
+    const double peso2 = 2.0;
+    const double peso3 = 1.0;
+    const double peso4 = 1.0;
+    double mediaTurma = 0.0;
+
+    int aluno = 1;
+    do {
+        double notas[totalNotas];
+        double somaNotas = 0.0;
+
+        int contador = 1;
+        do {
+            cout << "Digite a nota " << contador << " do aluno " << aluno << ": ";
+            cin >> notas[contador - 1];
+
+            switch (contador) 
+            {
+                case 1:
+                    somaNotas += notas[contador - 1] * peso1;
+                    break;
+                case 2:
+                    somaNotas += notas[contador - 1] * peso2;
+                    break;
+                case 3:
+                    somaNotas += notas[contador - 1] * peso3;
+                    break;
+                case 4:
+                    somaNotas += notas[contador - 1] * peso4;
+                    break;
+            }
+
+            contador++;
+        } while (contador <= totalNotas);
+
+        double media = somaNotas / (peso1 + peso2 + peso3 + peso4);
+        mediaTurma += media;
+
+        cout << "Média do aluno " << aluno << ": " << media << endl;
+
+        if (media >= 7.0) {
+            cout << "Situação: Aprovado" << endl;
+        } else if (media >= 4.0) {
+            cout << "Situação: Recuperação" << endl;
+            double pontosFaltantes = 7.0 - media;
+            cout << "Pontos necessários para aprovação: " << pontosFaltantes << endl;
+        } else {
+            cout << "Situação: Reprovado" << endl;
+        }
+
+        aluno++;
+    } while (aluno <= totalAlunos);
+
+    double mediaFinal = mediaTurma / totalAlunos;
+    cout << "Média da turma: " << mediaFinal << endl;
+
+    return 0;
+}

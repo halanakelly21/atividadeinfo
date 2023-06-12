@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    const int totaldePessoas = 15;
+    int idade, faixaEtaria;
+    double peso, somaPeso[4] = {0.0};
+    int contador[4] = {0};
+
+    int pessoa = 1;
+    do {
+        cout << "Digite a idade da pessoa " << pessoa << ": ";
+        cin >> idade;
+        cout << "Digite o peso da pessoa " << pessoa << ": ";
+        cin >> peso;
+
+        if (idade >= 1 && idade <= 10) {
+            faixaEtaria = 0;
+        } else if (idade >= 11 && idade <= 20) {
+            faixaEtaria = 1;
+        } else if (idade >= 21 && idade <= 30) {
+            faixaEtaria = 2;
+        } else {
+            faixaEtaria = 3;
+        }
+
+        somaPeso[faixaEtaria] += peso;
+        contador[faixaEtaria]++;
+
+        pessoa++;
+    } while (pessoa <= totaldePessoas);
+
+    cout << "\nMédia de peso por faixa etária:\n";
+    for (int i = 0; i < 4; i++) {
+        if (contador[i] != 0) {
+            double media = somaPeso[i] / contador[i];
+            cout << "Faixa etária " << i + 1 << ": " << media << " kg\n";
+        }
+    }
+
+    cout << "\nQuantidade de pessoas por faixa etária:\n";
+    for (int i = 0; i < 4; i++) {
+        cout << "Faixa etária " << i + 1 << ": " << contador[i] << " pessoas\n";
+    }
+
+    return 0;
+}

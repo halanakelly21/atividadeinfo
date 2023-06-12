@@ -1,0 +1,54 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() 
+{
+    const int tamanho = 10;
+    int lista[tamanho];
+
+    cout << "Digite 10 valores inteiros:" << endl;
+    for (int i = 0; i < tamanho; i++) {
+        cout << "Valor " << i + 1 << ": ";
+        cin >> lista[i];
+    }
+
+    int opcao;
+    cout << "Escolha a opção "<< endl;
+    cout << "1 - Listar em ordem crescente" << endl;
+    cout << "2 - Listar em ordem decrescente" << endl;
+    cout << "3 - Listar na ordem original" << endl;
+    cout << "Opção: ";
+    cin >> opcao;
+
+    switch (opcao) {
+        case 1:
+            cout << "Listagem em ordem crescente:" << endl;
+            sort(lista, lista + tamanho);
+            for (int i = 0; i < tamanho; i++) {
+                cout << lista[i] << " ";
+            }
+            cout << endl;
+            break;
+        case 2:
+            cout << "ordem decrescente:" << endl;
+            sort(lista, lista + tamanho, greater<int>());
+            for (int i = 0; i < tamanho; i++) {
+                cout << lista[i] << " ";
+            }
+            cout << endl;
+            break;
+        case 3:
+            cout << "ordem original:" << endl;
+            for (int i = 0; i < tamanho; i++) {
+                cout << lista[i] << " ";
+            }
+            cout << endl;
+            break;
+        default:
+            cout << "Opção inválida." << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() 
+{
+    const int tamanhoMatriz = 4;
+    int matriz[tamanhoMatriz][tamanhoMatriz];
+
+    // Ler os elementos da matriz
+    std::cout << "Digite os elementos da matriz 4x4:\n";
+    for (int i = 0; i < tamanhoMatriz; i++) 
+    {
+        for (int j = 0; j < tamanhoMatriz; j++) 
+        {
+            std::cin >> matriz[i][j];
+        }
+    }
+
+    // Imprimir os elementos da diagonal principal
+    std::cout << "Elementos da diagonal principal:\n";
+    for (int i = 0; i < tamanhoMatriz; i++) 
+    {
+        std::cout << matriz[i][i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

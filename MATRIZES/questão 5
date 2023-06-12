@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() 
+{
+    const int tamanhoMatriz = 3;
+    int matriz[tamanhoMatriz][tamanhoMatriz];
+
+    // Ler os elementos da matriz
+    std::cout << "Digite os elementos da matriz 3x3:\n";
+    for (int i = 0; i < tamanhoMatriz; i++) 
+    {
+        for (int j = 0; j < tamanhoMatriz; j++) 
+        {
+            std::cin >> matriz[i][j];
+        }
+    }
+
+    // Imprimir todos, exceto os da diagonal principal
+    std::cout << "Elementos da matriz, exceto da diagonal principal:\n";
+    for (int i = 0; i < tamanhoMatriz; i++) 
+    {
+        for (int j = 0; j < tamanhoMatriz; j++) 
+        {
+            if (i != j) 
+            {
+                std::cout << matriz[i][j] << " ";
+            }
+        }
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

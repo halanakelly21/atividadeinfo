@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int idade;
+
+    cout << "Digite a idade: ";
+    cin >> idade;
+
+    if (idade >= 10 && idade <= 14) {
+        cout << "Categoria: Infantil" << endl;
+    } else if (idade >= 15 && idade <= 17) {
+        cout << "Categoria: Juvenil" << endl;
+    } else if (idade >= 18 && idade <= 25) {
+        cout << "Categoria: Adulto" << endl;
+    } else
+
+    return 0;
+}

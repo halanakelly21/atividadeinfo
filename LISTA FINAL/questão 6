@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double numero1, numero2;
+
+    cout << "Digite o primeiro numero: ";
+    cin >> numero1;
+
+    cout << "Digite o segundo numero: ";
+    cin >> numero2;
+
+    double soma = numero1 + numero2;
+    double produto = numero1 * pow(numero2, 2);
+    double quadrado1 = pow(numero1, 2);
+    double raizQuadrada = sqrt(pow(numero1, 2) + pow(numero2, 2));
+    double seno = sin(numero1 - numero2);
+
+    cout << "Soma dos numeros: " << soma << endl;
+    cout << "Produto do primeiro numero pelo quadrado do segundo: " << produto << endl;
+    cout << "Quadrado do primeiro numero: " << quadrado1 << endl;
+    cout << "Raiz quadrada da soma dos quadrados: " << raizQuadrada << endl;
+    cout << "Seno da diferenca do primeiro pelo segundo: " << seno << endl;
+
+    return 0;
+}

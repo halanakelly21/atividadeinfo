@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string nome;
+
+    cout << "Digite um nome: ";
+    getline(cin, nome);
+
+    string quatroPrimeirasLetras = nome.substr(0, 4);
+
+    cout << "As 4 primeiras letras do nome : " << quatroPrimeirasLetras << endl;
+
+    return 0;
+}

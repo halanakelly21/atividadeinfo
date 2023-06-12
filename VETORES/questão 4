@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+
+bool isPrimo(int numero) 
+{
+    if (numero <= 1) 
+    {
+        return false;
+    }
+
+    for (int i = 2; i*i <= numero; i++) 
+    {
+        if (numero % i == 0) 
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() 
+{
+    const int tamanhoVetor = 10;
+    int vetor[tamanhoVetor];
+
+    // Preenchendo o vetor com os valores fornecidos
+    std::cout << "Digite 10 números inteiros:\n";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cin >> vetor[i];
+    }
+
+    // Exibindo o vetor preenchido
+    std::cout << "Vetor preenchido: ";
+    for (int i = 0; i < tamanhoVetor; i++) 
+    {
+        std::cout << vetor[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Exibindo os números primos encontrados
+    std::cout << "Números primos presentes no vetor: ";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        if (isPrimo(vetor[i])) {
+            std::cout << vetor[i] << " ";
+        }
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

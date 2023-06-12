@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int idade;
+
+    cout << "Digite a idade: ";
+    cin >> idade;
+
+    if (idade >= 18 && idade <= 67) {
+        cout << "Pode doar sangue." << endl;
+    } else {
+        cout << "Não pode doar sangue." << endl;
+    }
+
+    return 0;
+}

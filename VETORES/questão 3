@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+
+int main() 
+{
+    const int tamanhoVetor = 10;
+    int vetor[tamanhoVetor];
+
+    // Preenchendo o vetor com valores fornecidos
+    std::cout << "Digite 10 números inteiros:\n";
+    for (int i = 0; i < tamanhoVetor; i++) 
+    {
+        std::cin >> vetor[i];
+    }
+
+    // Exibindo o vetor preenchido
+    std::cout << "Vetor preenchido: ";
+    for (int i = 0; i < tamanhoVetor; i++) 
+    {
+        std::cout << vetor[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Números ímpares encontrados
+    std::cout << "Números ímpares presentes no vetor: ";
+    for (int i = 0; i < tamanhoVetor; i++) 
+    {
+        if (vetor[i] % 2 != 0) 
+        {
+            std::cout << vetor[i] << " ";
+        }
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

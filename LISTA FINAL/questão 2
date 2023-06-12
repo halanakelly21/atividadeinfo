@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+
+    cout << "Digite um numero inteiro: ";
+    cin >> numero;
+
+    int antecessor = numero - 1;
+    int sucessor = numero + 1;
+
+    cout << "O antecessor de " << numero << " e: " << antecessor << endl;
+    cout << "O sucessor de " << numero << " e: " << sucessor << endl;
+
+    return 0;
+}

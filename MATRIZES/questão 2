@@ -1,0 +1,41 @@
+#include <iostream>
+
+int main() 
+{
+    const int linhas = 3;
+    const int colunas = 3;
+    int matrizOriginal[linhas][colunas];
+    int matrizMultiplicada[linhas][colunas];
+
+    // Ler a matriz original
+    std::cout << "Digite os elementos da matriz 3x3:\n";
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            std::cin >> matrizOriginal[i][j];
+        }
+    }
+
+    // Multiplicar os elementos da matriz original por 2 e preencher a matriz multiplicada
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            matrizMultiplicada[i][j] = matrizOriginal[i][j] * 2;
+        }
+    }
+
+    // Imprimir a matriz multiplicada
+    std::cout << "Matriz multiplicada por 2:\n";
+    for (int i = 0; i < linhas; i++) 
+    {
+        for (int j = 0; j < colunas; j++) 
+        {
+            std::cout << matrizMultiplicada[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}

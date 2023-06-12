@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double num1, num2;
+    char operador;
+
+    cout << "Digite o primeiro numero: ";
+    cin >> num1;
+
+    cout << "Digite o operador (+, -, *, /): ";
+    cin >> operador;
+
+    cout << "Digite o segundo numero: ";
+    cin >> num2;
+
+    double resultado;
+
+    switch (operador) {
+        case '+':
+            resultado = num1 + num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            cout << "Resultado: " << resultado << endl;
+            break;
+        case '/':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                cout << "Resultado: " << resultado << endl;
+            } else {
+                cout << "Erro: divisao por zero!" << endl;
+            }
+            break;
+        default:
+            cout << "Operador invalido!" << endl;
+            break;
+    }
+
+    return 0;
+}

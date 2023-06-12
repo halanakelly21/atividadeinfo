@@ -1,0 +1,41 @@
+#include <iostream>
+
+int main() 
+{
+    const int tamanhoVetor = 8;
+    int vetor[tamanhoVetor];
+
+    // Preenchendo o vetor com valores fornecidos
+    std::cout << "Digite 8 números inteiros:\n";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cin >> vetor[i];
+    }
+
+    // Solicitando um número do teclado
+    int numero;
+    std::cout << "Digite um número inteiro para pesquisar: ";
+    std::cin >> numero;
+
+    // Pesquisando o número no vetor
+    bool encontrado = false;
+    int posicao = -1;
+
+    for (int i = 0; i < tamanhoVetor; i++) {
+        if (vetor[i] == numero) {
+            encontrado = true;
+            posicao = i;
+            break;
+        }
+    }
+
+    // Exibindo o resultado
+    if (encontrado) 
+    {
+        std::cout << "O número " << numero << " foi encontrado na posição " << posicao << " do vetor.\n";
+    } else 
+    {
+        std::cout << "O número " << numero << " não existe no vetor.\n";
+    }
+
+    return 0;
+}

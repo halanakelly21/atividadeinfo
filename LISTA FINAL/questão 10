@@ -1,0 +1,17 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int numeroDecimal;
+
+    cout << "Digite um numero decimal: ";
+    cin >> numeroDecimal;
+
+    cout << "Numero em hexa: 0x" << hex << numeroDecimal << endl;
+    cout << "Numero em octal: 0" << oct << numeroDecimal << endl;
+
+    return 0;
+    
+}

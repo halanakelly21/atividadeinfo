@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() 
+{
+    double HoraAula;
+    int numeroAulas;
+    double percentualINSS;
+
+    cout << "Digite o valor da hora de uma aula: ";
+    cin >> HoraAula;
+
+    cout << "Digite o numero de aulas dadas: ";
+    cin >> numeroAulas;
+
+    cout << "Digite o percentual de desconto do INSS (%): ";
+    cin >> percentualINSS;
+
+    double salarioBruto = HoraAula * numeroAulas;
+    double descontoINSS = salarioBruto * (percentualINSS / 100);
+    double salarioLiquido = salarioBruto - descontoINSS;
+
+    cout << fixed << setprecision(2);
+    cout << "Salario bruto: R$ " << salarioBruto << endl;
+    cout << "Desconto do INSS: R$ " << descontoINSS << endl;
+    cout << "Salario liquido: R$ " << salarioLiquido << endl;
+
+    return 0;
+}

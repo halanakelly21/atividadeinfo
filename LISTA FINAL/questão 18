@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double valorCompra;
+    double valorVenda;
+    double lucro;
+
+    cout << "Valor da compra: ";
+    cin >> valorCompra;
+
+    if (valorCompra < 20.00) {
+        lucro = 0.45; // Lucro de 45% se o valor da compra for menor que 20,00
+    } else {
+        lucro = 0.30; // Lucro de 30% se o valor da compra for igual a 20,00 ou maior
+    }
+
+    valorVenda = valorCompra + (valorCompra * lucro);
+
+    cout << "Valor da venda: " << valorVenda << endl;
+
+    return 0;
+}

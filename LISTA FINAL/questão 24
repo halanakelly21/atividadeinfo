@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    char tipoCarro;
+    double distancia, consumo;
+
+    cout << "Digite tipo de carro (A, B ou C): ";
+    cin >> tipoCarro;
+
+    cout << "Digite a distancia em km: ";
+    cin >> distancia;
+
+    switch (tipoCarro) 
+    {
+        case 'A':
+        case 'a':
+            consumo = distancia / 8;
+            break;
+        case 'B':
+        case 'b':
+            consumo = distancia / 9;
+            break;
+        case 'C':
+        case 'c':
+            consumo = distancia / 12;
+            break;
+        default:
+            cout << "Tipo de carro invalido!" << endl;
+            return 0;
+    }
+
+    cout << "O consumo estimado do carro tipo " << tipoCarro << " para uma distancia de " << distancia << " km eh: " << consumo << " litros." << endl;
+
+    return 0;
+}

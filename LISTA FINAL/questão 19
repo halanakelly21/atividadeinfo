@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int idade;
+
+    cout << "Digite a idade: ";
+    cin >> idade;
+
+    if (idade < 16) {
+        cout << "Classe Eleitoral: Não eleitor" << endl;
+    } else if (idade >= 18 && idade <= 65) {
+        cout << "Classe Eleitoral: Eleitor obrigatório" << endl;
+    } else if ((idade >= 16 && idade < 18) || idade > 65) {
+        cout << "Classe Eleitoral: Eleitor facultativo" << endl;
+    }
+    
+    return 0;
+}

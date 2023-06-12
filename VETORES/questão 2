@@ -1,0 +1,44 @@
+#include <iostream>
+#include <limits>
+
+int main() 
+{
+    const int tamanhoVetor = 10;
+    int vetor[tamanhoVetor];
+
+    // Preenchendo o vetor com valores fornecidos
+    std::cout << "Digite 10 números inteiros:\n";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cin >> vetor[i];
+    }
+
+    // Encontrando o maior e o menor número no vetor
+    int maiorNumero = std::numeric_limits<int>::min();
+    int menorNumero = std::numeric_limits<int>::max(); 
+    
+    for (int i = 0; i < tamanhoVetor; i++) {
+        if (vetor[i] > maiorNumero) {
+            maiorNumero = vetor[i];
+        }
+        if (vetor[i] < menorNumero) {
+            menorNumero = vetor[i];
+        }
+    }
+
+    // Exibindo o vetor preenchido
+    std::cout << "Vetor preenchido: ";
+    for (int i = 0; i < tamanhoVetor; i++) {
+        std::cout << vetor[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Exibindo o maior e o menor número encontrados
+    std::cout << "O maior número é: " << maiorNumero << std::endl;
+    std::cout << "O menor número é: " << menorNumero << std::endl;
+
+    // Diferença entre o maior e o menor número
+    int diferenca = maiorNumero - menorNumero;
+    std::cout << "A diferença entre o maior e o menor número é: " << diferenca << std::endl;
+
+    return 0;
+}

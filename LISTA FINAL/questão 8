@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double preco;
+    double desconto = 0.09;
+
+    cout << "Digite o preco do produto: ";
+    cin >> preco;
+
+    double novoPreco = preco - (preco * desconto);
+
+    cout << "Preco com desconto: " << novoPreco << endl;
+
+    return 0;
+}
